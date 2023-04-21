@@ -3,6 +3,9 @@ name: Reusable workflow
 on:
   workflow_dispatch:
   
+env:
+  REACT_APP_PROD: true
+  
 jobs:
   Build:
     runs-on: ubuntu-latest
@@ -10,5 +13,4 @@ jobs:
       - name: Set the value
         id: step_one
         run: |
-          echo "React_App_Prod=true" > .env
-          echo "the variable $process.env.React_App_Prod"
+          echo "the variable $env.REACT_APP_PROD"
