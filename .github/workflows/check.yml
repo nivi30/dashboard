@@ -3,14 +3,22 @@ name: Reusable workflow
 on:
   workflow_dispatch:
   
-env:
-  REACT_APP_PROD: true
-  
 jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
       - name: Set the value
         id: step_one
+        env:
+          REACT_APP_PROD: true
+        run: |
+          echo "the variable $REACT_APP_PROD"
+  Second:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set second value
+        id: step_two
+        env:
+          REACT_APP_PROD: false
         run: |
           echo "the variable $REACT_APP_PROD"
