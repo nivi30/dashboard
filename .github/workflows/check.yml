@@ -10,9 +10,9 @@ jobs:
       - name: Set the value
         id: step_one
         env:
-          REACT_APP_PROD: true
+         React_App_Prod: true
         run: |
-          echo "the variable $REACT_APP_PROD"
+          echo "the variable $React_App_Prod"
   Second:
     runs-on: ubuntu-latest
     steps:
