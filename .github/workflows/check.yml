@@ -21,4 +21,4 @@ jobs:
         run: |
           echo "React_App_Production=false" >> $GITHUB_ENV
           echo "React_App_Dev=fdsjjj" >> $GITHUB_ENV
-          cat .env
+          cat .GITHUB_ENV
