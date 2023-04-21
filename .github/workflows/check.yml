@@ -18,7 +18,6 @@ jobs:
     steps:
       - name: Set second value
         id: step_two
-        env:
-          REACT_APP_PROD: false
         run: |
-          echo "the variable $REACT_APP_PROD"
+          echo "React_App_Production=false" > .env
+          echo "the variable $React_App_Production"
