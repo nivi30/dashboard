@@ -13,4 +13,4 @@ jobs:
       - name: Set the value
         id: step_one
         run: |
-          echo "the variable $env.REACT_APP_PROD"
+          echo "the variable $REACT_APP_PROD"
