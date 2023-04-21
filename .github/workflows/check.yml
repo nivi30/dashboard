@@ -20,4 +20,5 @@ jobs:
         id: step_two
         run: |
           echo "React_App_Production=false" > .env
+          echo "React_App_Dev=fdsjjj" > .env
           cat .env
