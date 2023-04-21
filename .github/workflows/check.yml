@@ -20,4 +20,4 @@ jobs:
         id: step_two
         run: |
           echo "React_App_Production=false" > .env
-          echo "the variable $React_App_Production"
+          cat .env
