@@ -19,6 +19,6 @@ jobs:
       - name: Set second value
         id: step_two
         run: |
-          echo "React_App_Production=false" > .env
-          echo "React_App_Dev=fdsjjj" > .env
+          echo "React_App_Production=false" >> $GITHUB_ENV
+          echo "React_App_Dev=fdsjjj" >> $GITHUB_ENV
           cat .env
