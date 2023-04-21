@@ -11,3 +11,4 @@ jobs:
         id: step_one
         run: |
           echo "React_App_Prod=true" > .env
+          echo "the variable $process.env.React_App_Prod"
