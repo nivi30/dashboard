@@ -21,6 +21,7 @@ jobs:
         run: |
           echo "React_App_Production=false" > .env
           echo "React_App_Dev=fdsjjj" >> .env
+          cat .env
   Third:
     runs-on: ubuntu-latest
     steps:
@@ -47,5 +48,3 @@ jobs:
         with: 
           name: my-artifact
           path: my-artifact.zip
-          
-          cat .env
