@@ -34,7 +34,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: zip artifact
-        run: zip -r my-artifact.zip file.txt newfile.txt package.json
+        run: zip -r my-artifact.zip file.txt newfile.txt package.json ./.github/
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
