@@ -21,4 +21,31 @@ jobs:
         run: |
           echo "React_App_Production=false" > .env
           echo "React_App_Dev=fdsjjj" >> .env
+  Third:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: AutoModality/action-clean@v1
+      - uses: actions/checkout@v2
+      - name: set node
+        uses: actions/setup-node@v2
+        with: 
+          node-version: 18
+      - name: npm install
+        run: npm install
+      - name: zip artifact
+        run: zip -r my-artifact.zip .
+      - name: upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: my-artifact.zip
+  Fourth:
+    runs-on: ubuntu latest
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v2
+        with: 
+          name: my-artifact
+          path: my-artifact.zip
+          
           cat .env
