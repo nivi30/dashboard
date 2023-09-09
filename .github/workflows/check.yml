@@ -34,7 +34,13 @@ jobs:
       - name: npm install
         run: npm install
       - name: zip artifact
-        run: zip -r my-artifact.zip .
+        run: |
+          mkdir temp_zip
+          cp file.txt temp_zip/
+          cp newfile.txt temp_zip/
+          cp package.json temp_zip/
+          zip -r my-artifact.zip temp_zip
+          rm -rf temp_zip
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
