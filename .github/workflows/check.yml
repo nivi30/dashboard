@@ -38,12 +38,12 @@ jobs:
       - name : tar
         run: |
           tar -czvf nodeapp.tar.gz file.txt newfile.txt package.json ./.github/
-          mv nodeapp.tar.gz nodeapp.zip
+          # mv nodeapp.tar.gz nodeapp.zip
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: nodeapp
-          path: nodeapp.zip
+          path: nodeapp.tar.gz
       # - name: download artifact
       #   uses: actions/download-artifact@v2
       #   with: 
