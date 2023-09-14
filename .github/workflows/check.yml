@@ -34,7 +34,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: zip artifact
-        run: zip -r my-artifact.zip dashboard/file.txt dashboard/newfile.txt dashboard/package.json dashboard/.github/
+        run: zip -r my-artifact.zip . -i dashboard/file.txt dashboard/newfile.txt dashboard/package.json dashboard/.github/
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
