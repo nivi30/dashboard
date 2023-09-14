@@ -37,7 +37,7 @@ jobs:
       #   run: zip -r my-artifact.zip file.txt newfile.txt package.json ./.github/
       - name : tar
         run: |
-          tar -czvf nodeapp.tar.gz my-artifact.zip file.txt newfile.txt package.json ./.github/
+          tar -czvf nodeapp.tar.gz file.txt newfile.txt package.json ./.github/
           mv nodeapp.tar.gz nodeapp.zip
       - name: upload artifact
         uses: actions/upload-artifact@v2
