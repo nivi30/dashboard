@@ -33,17 +33,13 @@ jobs:
           node-version: 18
       - name: npm install
         run: npm install
-      # - name: zip artifact
-      #   run: zip -r my-artifact.zip file.txt newfile.txt package.json ./.github/
-      - name : tar
-        run: |
-          tar -czvf nodeapp.tar.gz file.txt newfile.txt package.json ./.github/
-          # mv nodeapp.tar.gz nodeapp.zip
+      - name: zip artifact
+        run: zip -r my-artifact.zip dashboard/file.txt dashboard/newfile.txt dashboard/package.json dashboard/.github/
       - name: upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: nodeapp
-          path: nodeapp.tar.gz
+          name: my-artifact
+          path: my-artifact.zip
       # - name: download artifact
       #   uses: actions/download-artifact@v2
       #   with: 
