@@ -4,7 +4,7 @@ repository_owner = "nivi30"
 repository_name = "dashboard"
 access_token = "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"
 
-url=f"https://api.github.com/repos/{repository_owner}/{repository_name}/actions/runs"
+url=f"https://api.github.com/repos/{repository_owner}/{repository_name}/actions/workflows/check.yml/runs"
 headers = { "Authorization": f"token {access_token}" }
 response = requests.get(url, headers=headers)
 workflow_runs = response.json()["workflow_runs"]
